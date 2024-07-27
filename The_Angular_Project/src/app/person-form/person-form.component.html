@@ -1,0 +1,7 @@
+<h1>{{ isEdit ? 'Edit Person' : 'Add New Person' }}</h1>
+<form (ngSubmit)="save()">
+    <label for="title">Name:</label>
+    <input id="title" [(ngModel)]="person.title" name="title" required>
+    <button type="submit">{{ isEdit ? 'Save' : 'Add' }}</button>
+</form>
+<a [routerLink]="['/persons']">Back to List</a>

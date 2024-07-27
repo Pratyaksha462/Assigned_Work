@@ -1,0 +1,9 @@
+<h1>Person List</h1>
+<ul>
+    <li *ngFor="let person of persons">
+        {{ person.title }}
+        <button (click)="deletePerson(person.id)">Delete</button>
+        <a [routerLink]="['/person', person.id]">Edit</a>
+    </li>
+</ul>
+<a [routerLink]="['/person', 0]">Add New Person</a>
